@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VehiclesAndPlansController">
+   <children>
+      <AnchorPane prefHeight="411.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="vehiclesButton" layoutX="271.0" layoutY="126.0" mnemonicParsing="false" onAction="#showVehicles" text="Vehicles" />
+            <Button fx:id="plansButton" layoutX="280.0" layoutY="187.0" mnemonicParsing="false" onAction="#showPlans" text="Plans" />
+            <Button fx:id="backBtn" layoutX="35.0" layoutY="35.0" mnemonicParsing="false" onAction="#back" text="Back" />
+            <Label fx:id="prompt" layoutX="222.0" layoutY="82.0" text="What would you like to see:" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

@@ -1,0 +1,83 @@
+A plan fine was added
+
+
+DROP FUNCTION IF EXISTS surcharge(p_date DATE);
+CREATE OR REPLACE FUNCTION surcharge(p_date DATE) 
+RETURNS VOID AS $$
+
+DECLARE
+last_proc INT;
+trip RECORD;
+
+-- if bike is not returned after a day
+incomplete_trips CURSOR
+FOR SELECT t.vtype, t.userid, t.s_time, t.station, p.name, p.price 
+FROM
+(SELECT t.vtype, userid, s_time, s.name AS station
+FROM trips AS t 
+JOIN stations AS s ON s.sid = t.startsat 
+WHERE t.vtype = 'electric-bike' OR t.vtype = 'bike' 
+AND endsat IS NULL AND DATE_PART('day', p_date - s_time) >= 1 
+AND  DATE_PART('day', p_date - s_time) < 2) AS t
+
+JOIN (SELECT p.name, p.price, f.vtype
+FROM plans AS p 
+NATURAL JOIN surcharges AS s 
+NATURAL JOIN isFor As f 
+WHERE stype = 'not-returned' ) AS p
+ON p.vtype = t.vtype;
+
+BEGIN
+
+last_proc := (SELECT DATE_PART('day', p_date - t.date)
+FROM transactions as t
+NATURAL JOIN surcharges as s
+WHERE s.stype = 'not-returned'
+ORDER BY t.date DESC
+LIMIT 1);
+
+IF last_proc < 1 THEN
+    RETURN;
+END IF;
+
+-- Open the cursor
+OPEN incomplete_trips;
+
+LOOP
+    -- fetch row
+      FETCH incomplete_trips INTO trip;
+
+    -- exit when no more row to fetch
+      EXIT WHEN NOT FOUND;
+ 
+    -- build the output
+        INSERT INTO transactions (userid, name, status, date, subtotal, comment) 
+        VALUES (trip.userid, trip.name , 1, NOW(), trip.price, 'Bike not returned for trip made on ' || trip.s_time || ' from ' || trip.station);
+END LOOP;
+
+-- Close the cursor
+CLOSE incomplete_trips;
+
+END; $$ 
+
+LANGUAGE plpgsql;
+
+-- Add transaction surcharges
+SELECT surcharge(CURRENT_DATE);
+
+Current date : 24 march
+In trips, we have two rides for which the bike has not been returned for more than a day.
+
+           s_time    |   e_time   | userid | startsat | endsat | serialnb |  vtype
+----------------------------+----------------------------+--------+----------+--------+-
+ 2019-03-22 13:20:00 |            |      3 |     6049 |        |       8  | bike
+ 2019-03-22 12:30:00 |            |      1 |     6049 |        |       11 | bike
+
+
+After running the script, 2 transactions have been created.
+
+tranid | userid |                name                 | status |            date            | subtotal |                                    comment                                     
+-------+--------+-------------------------------------+--------+----------------------------+----------+--------------------------------------------------------------------------------
+395    |    6   | 1-trip biking                       |    1   |    2019-03-20 00:00:00     |  23.00   | 
+396    |    3   | Fine - Vehicle not returned - Bikes |    1   |    2019-03-24 19:50:00     |  150.00  | Bike not returned for trip made on 2019-03-22 13:20:00 from Queen / Wellington
+397    |    1   | Fine - Vehicle not returned - Bikes |    1   |    2019-03-24 19:50:00     |  150.00  | Bike not returned for trip made on 2019-03-22 12:30:00 from Queen / Wellington

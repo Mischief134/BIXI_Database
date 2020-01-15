@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PersonalInfoController">
+    <AnchorPane VBox.vgrow="ALWAYS">
+        <Label fx:id="prompt" layoutX="260.0" layoutY="53.0" text="Please enter a user email." />
+        <TextField fx:id="email" layoutX="277.0" layoutY="84.0" onAction="#onEmailEnter" prefHeight="20.0" prefWidth="124.0" promptText="Email" />
+        <Button fx:id="backButton" layoutX="28.0" layoutY="26.0" onAction="#back" text="Back" />
+        <TableView fx:id="userTable" layoutX="138.0" layoutY="252.0" prefHeight="53.0" prefWidth="402.0">
+            <columns>
+
+                <TableColumn fx:id="firstNameCol" prefWidth="100.0" text="First Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="firstName" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn fx:id="lastNameCol" prefWidth="100.0" text="Last Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="lastName" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn fx:id="ageCol" prefWidth="50.0" text="Age">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="age" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn fx:id="emailCol" prefWidth="150.0" text="Email">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="email" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </AnchorPane>
+</VBox>

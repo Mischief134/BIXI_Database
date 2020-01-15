@@ -1,0 +1,68 @@
+ALTER TABLE users ADD CONSTRAINT emailUnique UNIQUE (email);
+
+
+As a rule, if the percentage of returned rows is smaller than 5-10% of all rows in the table 
+the benefit of using the information stored in the index outweighs the additional intermediate step to read it.
+Therefore, an index is useful for queries which target a relative small number of rows.
+
+// Transaction menu
+
+We filter all transactions by user email. 
+For this purpose, transactions is joined with users on  users.userid = transactions.userid.
+Building an index on transactions.email is critical to speedup the query.
+
+CREATE INDEX idx_email ON users (email);
+
+EXPLAIN SELECT transactions.name, transactions.date, transactions.subtotal
+                FROM transactions 
+                INNER JOIN users ON users.userid = transactions.userid 
+                WHERE users.email = 'cnattriss2@jalbum.net';
+
+
+                              QUERY PLAN                               
+-----------------------------------------------------------------------
+ Hash Join  (cost=3.89..14.42 rows=3 width=43)
+   Hash Cond: (transactions.userid = users.userid)
+   ->  Seq Scan on transactions  (cost=0.00..9.00 rows=400 width=47)
+   ->  Hash  (cost=3.88..3.88 rows=1 width=4)
+         ->  Seq Scan on users  (cost=0.00..3.88 rows=1 width=4)
+               Filter: ((email)::text = 'cnattriss2@jalbum.net'::text)
+(6 rows)
+
+
+                                         QUERY PLAN                                         
+--------------------------------------------------------------------------------------------
+ Nested Loop  (cost=4.30..13.27 rows=3 width=43)
+   ->  Seq Scan on users  (cost=0.00..3.88 rows=1 width=4)
+         Filter: ((email)::text = 'cnattriss2@jalbum.net'::text)
+   ->  Bitmap Heap Scan on transactions  (cost=4.30..9.36 rows=3 width=47)
+         Recheck Cond: (userid = users.userid)
+         ->  Bitmap Index Scan on idx_transactions_userid  (cost=0.00..4.29 rows=3 width=0)
+               Index Cond: (userid = users.userid)
+(7 rows)
+
+We can notice than now the query performs significantly faster.
+
+===========================================================================================================
+
+On a regular basis, we want to have a report on all damaged vehicle on the network. 
+The ratio of damaged vehicule is very low so an index is useful to spead up the process.
+
+
+CREATE INDEX idx_vehicles_state ON vehicles (veh_state);
+
+EXPLAIN SELECT * FROM Vehicles where veh_state = 'damaged';
+
+                        QUERY PLAN                        
+----------------------------------------------------------
+ Seq Scan on vehicles  (cost=0.00..12.41 rows=2 width=40)
+   Filter: ((veh_state)::text = 'damaged'::text)
+(2 rows)
+
+                                   QUERY PLAN                                    
+---------------------------------------------------------------------------------
+ Bitmap Heap Scan on vehicles  (cost=4.29..8.52 rows=2 width=40)
+   Recheck Cond: ((veh_state)::text = 'damaged'::text)
+   ->  Bitmap Index Scan on idx_vehicles_state  (cost=0.00..4.29 rows=2 width=0)
+         Index Cond: ((veh_state)::text = 'damaged'::text)
+(4 rows)
