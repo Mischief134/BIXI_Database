@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MenuController">
+    <AnchorPane VBox.vgrow="ALWAYS">
+        <Button fx:id="changePersonalInfoBtn" layoutX="228.0" layoutY="59.0" mnemonicParsing="false" onAction="#changePersonalInfo" prefHeight="30.0" prefWidth="203.0" text="Personal Info" />
+        <Button fx:id="manageTransactionsBtn" layoutX="228.0" layoutY="229.0" mnemonicParsing="false" onAction="#manageTransactions" prefHeight="30.0" prefWidth="203.0" text="Manage Transactions" />
+        <Button fx:id="displayVehiclesAndPlansBtn" layoutX="228.0" layoutY="185.0" mnemonicParsing="false" onAction="#displayVehiclesAndPlans" prefHeight="30.0" prefWidth="203.0" text="Available Vehicles and Plans" />
+        <Button fx:id="findClosestStationBtn" layoutX="228.0" layoutY="143.0" mnemonicParsing="false" onAction="#findClosestStation" prefHeight="30.0" prefWidth="203.0" text="Closest Station" />
+        <Button fx:id="getVehicleAvailabilityBtn" layoutX="228.0" layoutY="103.0" mnemonicParsing="false" onAction="#getVehicleAvailability" prefHeight="30.0" prefWidth="203.0" text="Favorite Station" />
+    </AnchorPane>
+</VBox>

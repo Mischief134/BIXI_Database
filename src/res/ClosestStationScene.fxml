@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClosestStationController">
+    <AnchorPane VBox.vgrow="ALWAYS">
+        <Label fx:id="result" layoutX="200.0" layoutY="300.0"/>
+        <Label fx:id="prompt" layoutX="230.0" layoutY="50.0" text="Enter Your Precise Location"/>
+        <TextField fx:id="latitude" layoutX="160.0" layoutY="100.0" prefHeight="20.0" prefWidth="124.0" promptText="Latitude" />
+        <TextField fx:id="longitude" layoutX="340.0" layoutY="100.0" prefHeight="20.0" prefWidth="124.0" promptText="Longitude" />
+        <Button fx:id="backButton" text="Back" onAction="#back"/>
+        <Button fx:id="confirm" text="Get Closest Station!" onAction="#closestStation" layoutX="260" layoutY="150"/>
+    </AnchorPane>
+</VBox>

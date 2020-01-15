@@ -1,0 +1,151 @@
+tranID,userID,name,status,date,subtotal
+1,3,1-day biking+ (inc. electric bikes),2,2014-12-13 07:28:04,435.08
+2,123,10-trips biking,,2017-03-30 08:01:22,733.65
+3,115,1-month car rental,,2013-04-29 06:54:40,552.43
+4,26,All year car rental,3,2016-10-11 08:44:00,54.07
+5,70,1-day car rental,3,2013-10-24 07:56:29,572.13
+6,125,1-month car rental,1,2016-06-09 08:38:56,872.87
+7,150,3-days car rental,2,2018-11-21 07:46:29,637.22
+8,133,7-days car rental,2,2018-12-23 08:37:31,212.13
+9,44,1-month biking,1,2018-02-07 07:59:24,35.09
+10,18,1-month coverage - luxury cars,2,2018-07-16 08:37:41,916.85
+11,88,1-month biking - Reduced fare,2,2013-03-14 07:04:14,998.44
+12,68,7-days combo (inc. all bikes and cars),3,2013-06-10 07:36:34,392.05
+13,4,1-day coverage - regular cars,1,2015-09-01 08:55:48,506.91
+14,79,7-days coverage - regular cars,1,2016-11-09 08:34:01,193.61
+15,81,1-month biking+ (electric bikes) - Reduced fare,3,2014-07-20 08:18:10,329.75
+16,52,1-month combo (inc. all bikes and cars),2,2018-12-18 07:08:58,371.09
+17,79,7-days biking,3,2016-09-24 06:02:57,164.86
+18,64,1-day coverage - luxury cars,1,2015-12-20 08:07:18,70.24
+19,20,All year car rental,3,2016-04-21 06:55:25,781.81
+20,137,3-days combo (inc. all bikes and cars),3,2018-10-28 06:48:31,1010.40
+21,15,1-year coverage - regular cars,1,2015-11-11 07:11:57,284.12
+22,115,1-month biking - Reduced fare,2,2014-10-24 06:16:39,128.51
+23,29,1-month combo (inc. all bikes and cars),3,2013-05-09 06:44:10,956.23
+24,46,1-month biking - Reduced fare,1,2017-12-23 08:30:16,888.24
+25,75,1-month car rental - Reduced fare,2,2014-12-07 07:36:49,152.84
+26,24,1-month combo (inc. all bikes and cars) - Reduced fare,2,2016-04-03 08:06:21,593.50
+27,139,10-trips biking+ (electric bikes),1,2015-03-21 08:19:21,590.01
+28,71,1-month biking+ (electric bikes) - Reduced fare,1,2013-08-03 06:23:08,1012.38
+29,121,2-trips biking+ (electric bikes),1,2015-08-22 06:44:20,490.53
+30,130,All year biking+ (electric bikes) - Reduced fare,1,2013-10-04 08:28:25,845.17
+31,120,1-month biking+ (electric bikes) - Reduced fare,1,2014-11-09 07:39:51,868.71
+32,15,10-trips biking,1,2015-10-17 08:11:04,81.98
+33,92,1-month coverage - luxury cars,2,2017-01-12 06:37:25,874.68
+34,72,2-trips biking+ (electric bikes),2,2015-01-06 07:56:28,257.22
+35,81,3-days car rental,1,2015-03-20 07:52:23,385.71
+36,11,1-day coverage - regular cars,2,2017-10-02 08:39:07,575.81
+37,64,1-year coverage - regular cars,3,2013-04-04 07:09:26,775.77
+38,29,3-days combo (inc. all bikes and cars),1,2014-05-09 08:49:26,54.49
+39,99,All year biking - Reduced fare,3,2013-10-09 08:42:02,125.23
+40,10,All year biking - Reduced fare,3,2019-01-05 07:25:55,279.75
+41,133,1-day biking+ (inc. electric bikes),2,2018-01-22 08:12:18,676.35
+42,18,1-trip biking,3,2018-07-30 06:09:08,357.13
+43,143,All year car rental,2,2014-03-17 08:14:38,488.54
+44,44,1-trip biking+ (electric bikes),2,2016-02-03 08:28:32,735.27
+45,6,3-days combo (inc. all bikes and cars),1,2018-07-03 08:25:38,407.30
+46,21,All year biking,1,2017-02-21 07:00:30,89.00
+47,18,1-trip biking,2,2016-04-22 07:00:58,305.42
+48,145,3-days coverage - luxury cars,2,2013-07-14 07:51:25,489.69
+49,129,1-month combo (inc. all bikes and cars),3,2019-01-31 06:19:50,272.93
+50,121,All year biking,2,2016-04-19 07:28:11,967.52
+51,130,10-trips biking+ (electric bikes),2,2014-05-02 08:17:58,977.16
+52,45,1-year coverage - luxury cars,3,2014-04-01 07:35:29,959.78
+53,138,1-month biking - Reduced fare,3,2015-10-23 06:50:20,756.12
+54,114,All year combo (inc. all bikes and cars),1,2019-02-03 07:08:32,363.61
+55,111,1-month coverage - regular cars,2,2017-10-24 06:26:51,382.85
+56,16,10-trips biking+ (electric bikes),2,2015-05-03 06:48:51,182.19
+57,58,1-month biking,1,2016-08-15 07:25:56,595.72
+58,82,1-month car rental,2,2014-01-15 07:00:36,422.82
+59,32,7-days combo (inc. all bikes and cars),1,2014-04-14 06:33:30,946.91
+60,129,All year combo (inc. all bikes and cars) - Reduced fare,1,2013-03-14 06:25:26,717.33
+61,60,All year car rental - Reduced fare,2,2016-07-18 07:38:40,810.92
+62,94,7-days biking+,3,2018-12-03 06:05:08,472.66
+63,130,3-days biking,3,2016-07-20 08:40:49,314.26
+64,17,1-year coverage - regular cars,1,2017-03-08 07:02:44,497.75
+65,20,1-day car rental,2,2016-11-28 08:27:36,810.24
+66,63,3-days coverage - luxury cars,3,2018-02-06 07:05:23,406.05
+67,118,3-days combo (inc. all bikes and cars),1,2015-04-30 07:28:32,408.08
+68,106,3-days biking,2,2018-09-02 07:55:18,467.72
+69,44,7-days car rental,2,2018-02-01 07:54:30,68.19
+70,82,1-month car rental,3,2016-04-25 06:08:24,427.13
+71,111,1-day biking,2,2018-09-03 08:00:15,255.73
+72,107,1-month coverage - regular cars,1,2013-08-31 06:04:55,447.64
+73,139,3-days car rental,2,2018-03-24 08:53:35,977.93
+74,106,7-days car rental,3,2014-07-08 08:10:48,273.28
+75,63,7-days coverage - luxury cars,1,2014-01-22 08:02:55,860.08
+76,90,All year biking+,1,2016-09-27 07:54:12,775.07
+77,16,1-month combo (inc. all bikes and cars),1,2016-02-27 08:03:11,396.09
+78,11,3-days biking+ (inc. electric bikes),2,2013-12-06 08:37:52,785.96
+79,70,1-month biking+ (electric bikes) - Reduced fare,2,2013-07-12 06:08:45,566.07
+80,146,7-days biking+,2,2017-11-10 08:54:30,923.62
+81,78,3-days biking,3,2018-02-18 07:11:49,84.03
+82,59,1-month biking+ (electric bikes),1,2018-07-03 08:29:38,492.85
+83,140,1-month coverage - luxury cars,1,2014-10-29 08:14:51,826.63
+84,104,2-trips biking+ (electric bikes),3,2014-05-12 06:24:55,481.45
+85,101,All year biking,1,2013-08-22 08:36:15,719.60
+86,10,1-month biking - Reduced fare,3,2013-04-16 07:52:50,685.43
+87,72,1-day coverage - luxury cars,3,2017-12-19 06:40:19,1007.53
+88,111,10-trips biking+ (electric bikes),3,2018-10-03 08:23:20,583.31
+89,39,1-day coverage - luxury cars,2,2018-08-25 07:14:01,404.52
+90,54,10-trips biking,3,2017-07-10 07:42:48,328.27
+91,118,7-days biking,3,2016-12-03 07:46:13,886.97
+92,12,1-month car rental - Reduced fare,1,2016-02-17 08:36:05,132.98
+93,137,1-month biking+ (electric bikes) - Reduced fare,1,2016-12-02 08:38:14,624.75
+94,109,3-days coverage - regular cars,3,2013-06-25 08:03:39,1020.38
+95,53,1-trip biking+ (electric bikes),1,2019-02-18 08:28:14,804.00
+96,58,1-month car rental,2,2014-01-12 06:57:23,927.43
+97,108,1-month combo (inc. all bikes and cars),2,2014-06-13 06:07:01,434.50
+98,136,3-days combo (inc. all bikes and cars),2,2014-05-26 07:21:07,143.85
+99,52,10-trips biking+ (electric bikes),3,2015-06-19 08:37:19,988.58
+100,113,3-days car rental,3,2018-02-08 07:35:02,99.87
+101,120,3-days car rental,2,2016-09-06 07:25:14,229.47
+102,114,3-days biking,3,2015-09-07 07:26:23,281.35
+103,6,3-days car rental,1,2016-03-19 08:48:11,466.83
+104,4,1-day car rental,2,2013-07-05 06:03:35,135.43
+105,52,1-month biking+ (electric bikes),2,2014-12-09 07:01:11,850.88
+106,53,3-days coverage - luxury cars,3,2017-12-07 06:15:12,961.71
+107,142,7-days combo (inc. all bikes and cars),3,2018-11-28 07:00:59,76.19
+108,34,10-trips biking,2,2015-09-06 07:51:22,81.75
+109,132,3-days combo (inc. all bikes and cars),2,2016-01-31 07:45:36,918.75
+110,107,2-trips biking+ (electric bikes),2,2018-07-21 08:30:38,801.32
+111,141,1-month car rental - Reduced fare,1,2014-07-07 08:25:57,548.46
+112,111,1-month biking,2,2016-04-13 06:52:37,475.90
+113,100,3-days biking,1,2013-05-29 07:25:49,231.99
+114,130,1-month car rental,3,2013-11-25 07:43:42,149.36
+115,49,3-days car rental,1,2014-06-23 06:06:21,322.51
+116,84,All year biking,1,2016-06-29 06:41:16,939.76
+117,114,7-days coverage - regular cars,3,2013-06-26 07:32:28,791.82
+118,86,1-day biking+ (inc. electric bikes),3,2013-06-14 07:30:31,416.20
+119,49,1-month coverage - luxury cars,1,2016-10-04 08:19:35,733.98
+120,91,1-trip biking,3,2018-04-28 08:47:16,358.15
+121,88,1-year coverage - regular cars,3,2014-01-08 06:21:22,506.72
+122,109,3-days coverage - regular cars,1,2015-03-03 06:49:39,366.51
+123,11,All year combo (inc. all bikes and cars) - Reduced fare,2,2015-12-25 06:01:49,495.73
+124,96,1-month car rental,2,2013-08-01 07:02:27,46.71
+125,77,All year car rental,1,2014-07-25 07:58:16,918.89
+126,25,All year biking+,3,2018-05-22 06:48:55,792.83
+127,15,1-day biking,3,2014-08-10 08:25:53,930.84
+128,79,1-month coverage - luxury cars,3,2017-09-11 07:06:28,341.37
+129,123,All year biking,3,2017-11-08 07:58:44,355.82
+130,113,7-days car rental,3,2014-05-27 07:14:59,150.17
+131,20,1-month combo (inc. all bikes and cars),2,2017-09-22 08:47:43,248.91
+132,130,1-trip biking+ (electric bikes),2,2017-06-04 06:29:52,596.79
+133,131,1-month car rental - Reduced fare,2,2016-12-26 07:01:14,755.29
+134,4,1-trip biking+ (electric bikes),1,2016-02-01 06:44:55,928.38
+135,128,10-trips biking+ (electric bikes),2,2013-04-07 07:01:29,266.78
+136,10,1-day coverage - luxury cars,1,2014-05-12 06:35:05,667.75
+137,81,3-days coverage - regular cars,2,2018-11-16 08:15:27,38.16
+138,92,3-days coverage - luxury cars,2,2015-12-02 06:23:23,766.93
+139,87,2-trips biking,1,2018-10-25 06:28:13,366.52
+140,85,3-days biking+ (inc. electric bikes),3,2018-04-08 08:42:04,566.29
+141,104,All year biking+,2,2018-06-10 06:33:50,310.41
+142,98,All year car rental,1,2014-07-10 08:14:22,575.15
+143,102,All year biking+,2,2014-06-19 08:08:20,156.21
+144,140,All year biking+,3,2013-07-27 07:09:30,136.04
+145,103,7-days coverage - regular cars,2,2018-11-02 07:58:49,364.44
+146,12,1-month biking,3,2017-12-28 07:01:13,211.25
+147,13,1-month car rental,1,2013-05-11 08:12:51,253.22
+148,130,2-trips biking,2,2013-05-17 07:48:19,266.57
+149,7,1-day coverage - luxury cars,3,2015-03-10 07:43:07,919.37
+150,57,7-days biking+,1,2017-07-26 06:53:47,594.66
